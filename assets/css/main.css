@@ -2387,6 +2387,13 @@
 
 /* Icon */
 
+	.devicon {
+		font-size: 34px;
+		padding: 15px;
+		border: 1px solid black;
+		border-radius: 50%;
+	}
+
 	.icon {
 		text-decoration: none;
 		border-bottom: none;
@@ -2557,6 +2564,7 @@
 			cursor: default;
 			list-style: none;
 			padding-left: 0;
+			display: flex;
 		}
 
 			ul.actions li {
@@ -2575,7 +2583,7 @@
 
 			ul.actions.vertical li {
 				display: block;
-				padding: 1rem 0 0 0;
+				/*padding: 1rem 0 0 0;*/
 			}
 
 				ul.actions.vertical li:first-child {
@@ -8414,3 +8422,8 @@
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+
+.contact-will * {
+	margin: 0.5em;
+}
