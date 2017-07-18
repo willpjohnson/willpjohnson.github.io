@@ -8429,5 +8429,9 @@
 }
 
 .link-icons {
-	font-size: 40px; 
+	font-size: 40px;
+}
+
+.items h3 {
+	margin-top: 15px;
 }
