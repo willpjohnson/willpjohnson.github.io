@@ -23,7 +23,7 @@ nav {
   align-items: center;
   padding: 20px;
   height: 120px;
-  background-color: $yellow;
+  background-color: $cyan;
 }
 
 nav .links {
@@ -40,6 +40,6 @@ nav a {
 }
 
 nav a.router-link-exact-active {
-  color: $purple;
+  color: white;
 }
 </style>
