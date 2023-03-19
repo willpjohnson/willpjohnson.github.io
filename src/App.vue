@@ -1,9 +1,8 @@
 <template lang="pug">
 nav
-  img.logo(
-    alt="Will Johnson logo"
-    src="./assets/will-logo.png"
-  )
+  .header-logo
+    .will William
+    .johnson Johnson
   .links
     router-link.link(
       to="/"
@@ -24,7 +23,8 @@ nav {
   align-items: center;
   padding: 20px;
   height: 120px;
-  background-color: $cyan;
+  min-height: 120px;
+  background-color: $black;
 }
 
 nav .links {
@@ -48,18 +48,38 @@ nav a.router-link-exact-active {
   color: white;
 }
 
+.header-logo {
+  margin-left: 12px;
+  text-align: start;
+  font-family: stillTime;
+  font-size: 48px;
+  color: $pink;
+  text-shadow:
+    0 0 1px $white,
+    0 0 3px $white,
+    0 0 5px $white,
+    0 0 10px $white,
+    0 0 20px $pink,
+    0 0 23px $pink,
+    0 0 25px $pink,
+    2px 2px $black,
+    4px 4px $cyan;
+  
+  .johnson { margin-left: 32px; }
+}
+
 .border {
   width: 100%;
   height: 2px;
-  background-color: $white;
+  background-color: $cyan;
   box-shadow:
-    0 0 7px $white,
-    0 0 10px $white,
-    0 0 21px $white,
+    0 0 7px $cyan,
+    0 0 10px $cyan,
+    0 0 21px $cyan,
     0 0 42px $cyan,
-    0 0 82px $cyan,
-    0 0 92px $cyan,
-    0 0 102px $cyan,
-    0 0 151px $cyan;
+    0 0 82px $white,
+    0 0 92px $white,
+    0 0 102px $white,
+    0 0 151px $white;
 }
 </style>

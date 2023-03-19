@@ -9,6 +9,12 @@
   flex-direction: column;
 }
 
+@font-face {
+  font-family: stillTime;
+  src: url(still_time.otf);
+  font-weight: bold;
+}
+
 body {
   background-color: #d0d0d0;
 }
