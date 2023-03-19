@@ -11,7 +11,7 @@ nav
     router-link(
       to="/about"
     ) About
-router-view
+router-view.router-view
 </template>
 
 <style scoped lang="scss">

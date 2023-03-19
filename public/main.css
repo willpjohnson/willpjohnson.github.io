@@ -8,3 +8,7 @@
 body {
   background-color: #FFCFD2;
 }
+
+.router-view {
+  padding: 20px;
+}
