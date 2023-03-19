@@ -7,7 +7,7 @@ nav
   .links
     router-link(
       to="/"
-    ) Home
+    ) Music
     router-link(
       to="/about"
     ) About
@@ -36,7 +36,11 @@ nav .logo {
 
 nav a {
   font-weight: bold;
+  font-size: 24px;
   color: $pink;
+}
+nav a:not(:last-child) {
+  margin-right: 8px;
 }
 
 nav a.router-link-exact-active {

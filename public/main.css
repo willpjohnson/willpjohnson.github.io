@@ -12,3 +12,11 @@ body {
 .router-view {
   padding: 20px;
 }
+
+.hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);;
+}
+.hover:hover {
+  cursor: pointer;
+  transform: translate(-2px, -2px);
+}
