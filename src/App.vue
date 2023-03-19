@@ -1,5 +1,9 @@
 <template lang="pug">
 nav
+  img.logo(
+    alt="Will Johnson logo"
+    src="./assets/will-logo.png"
+  )
   router-link(
     to="/"
   ) Home
@@ -10,16 +14,15 @@ router-view
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+nav {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  height: 120px;
 }
 
-nav {
-  padding: 30px;
+nav .logo {
+  height: 80px;
 }
 
 nav a {
