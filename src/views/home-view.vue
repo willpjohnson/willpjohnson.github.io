@@ -4,35 +4,33 @@
     .link(
       v-for="tab in tabs"
       :key="tab.name"
+      @click="scrollTo(tab.ref)"
     ) {{  tab.name  }}
-  component(
-    :is="activeTab.comp"
-  )
+  .parent-container
+    LiveTheater(ref="theater")
 </template>
 
 <script>
-import { markRaw } from 'vue';
 import LiveTheater from '../components/live-theater.vue';
 
 export default {
   name: 'HomeView',
 
-  data() {
-    return {
-      activeTabIdx: 0,
-      liveTheater: markRaw(LiveTheater),
-    };
+  components: {
+    LiveTheater,
   },
 
   computed: {
     tabs() {
       return [
-        { name: 'Theater', comp: this.liveTheater },
+        { name: 'Theater', ref: 'theater' },
       ];
     },
+  },
 
-    activeTab() {
-      return this.tabs[this.activeTabIdx];
+  methods: {
+    scrollTo(ref) {
+      console.log(ref);
     },
   },
 }
@@ -40,12 +38,23 @@ export default {
 
 <style scoped lang="scss">
   @import '../../public/colors.scss';
+
+  .home {
+    display: flex;
+    height: 100%;
+    padding: 20px;
+  }
   .sub-nav {
-    width: calc(100% - 40px);
+    height: calc(100% - 40px);
     padding: 20px;
     background-color: $white;
 
-    display: flex;
-    justify-content: space-between;
+    margin-right: 12px;
+  }
+
+  .parent-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
   }
 </style>

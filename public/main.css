@@ -3,14 +3,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 body {
   background-color: #d0d0d0;
-}
-
-.router-view {
-  padding: 20px;
 }
 
 .link {

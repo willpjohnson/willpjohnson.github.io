@@ -33,6 +33,7 @@
 <style scoped lang="scss">
   @import '../../public/colors.scss';
   .about {
+    padding: 20px;
     display: flex;
     .images {
       display: flex;
