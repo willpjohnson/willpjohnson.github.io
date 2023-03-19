@@ -13,6 +13,15 @@ body {
   padding: 20px;
 }
 
+.link {
+  cursor: pointer;
+  color: #F990E8;
+}
+.link:hover {
+  color: #d0d0d0;
+  transform: translate(-1px, -1px);
+}
+
 .hover {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);;
 }

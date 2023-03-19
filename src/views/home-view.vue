@@ -1,8 +1,12 @@
 <template lang="pug">
 .home
   .sub-nav
+    .link(
+      v-for="tab in tabs"
+      :key="tab.name"
+    ) {{  tab.name  }}
   component(
-    :is="liveTheater"
+    :is="activeTab.comp"
   )
 </template>
 
@@ -23,7 +27,7 @@ export default {
   computed: {
     tabs() {
       return [
-        this.liveTheater,
+        { name: 'Theater', comp: this.liveTheater },
       ];
     },
 
@@ -39,7 +43,7 @@ export default {
   .sub-nav {
     width: calc(100% - 40px);
     padding: 20px;
-    background-color: $cyan;
+    background-color: $white;
 
     display: flex;
     justify-content: space-between;
