@@ -14,12 +14,21 @@ body {
 }
 
 .link {
+  text-decoration: none;
   cursor: pointer;
   color: #F990E8;
+  text-shadow: 1px 1px 1px #0BD2D3;
 }
 .link:hover {
-  color: #d0d0d0;
+  color: #FFFFFF;
   transform: translate(-1px, -1px);
+
+  text-shadow:
+    0 0 4px #F990E8,
+    0 0 8px #F990E8,
+    0 0 9px #F990E8,
+    0 0 10px #F990E8,
+    0 0 15px #F990E8;
 }
 
 .hover {

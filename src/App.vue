@@ -5,12 +5,13 @@ nav
     src="./assets/will-logo.png"
   )
   .links
-    router-link(
+    router-link.link(
       to="/"
     ) Music
-    router-link(
+    router-link.link(
       to="/about"
     ) About
+.border
 router-view.router-view
 </template>
 
@@ -45,5 +46,20 @@ nav a:not(:last-child) {
 
 nav a.router-link-exact-active {
   color: white;
+}
+
+.border {
+  width: 100%;
+  height: 2px;
+  background-color: $white;
+  box-shadow:
+    0 0 7px $white,
+    0 0 10px $white,
+    0 0 21px $white,
+    0 0 42px $cyan,
+    0 0 82px $cyan,
+    0 0 92px $cyan,
+    0 0 102px $cyan,
+    0 0 151px $cyan;
 }
 </style>

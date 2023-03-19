@@ -44,9 +44,6 @@
     .bio {
       width: 40vw;
       font-size: 24px;
-      .link {
-        color: $pink;
-      }
     }
 
   }
