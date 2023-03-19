@@ -13,12 +13,15 @@ nav
 router-view
 </template>
 
-<style>
+<style scoped lang="scss">
+@import '../public/colors.scss';
+
 nav {
   display: flex;
   align-items: center;
   padding: 20px;
   height: 120px;
+  background-color: $yellow;
 }
 
 nav .logo {
