@@ -12,6 +12,7 @@
   .theater-container{
     display: flex;
     justify-content: space-around;
+    margin: 20px 0px;
 
     .image {
       height: 400px;

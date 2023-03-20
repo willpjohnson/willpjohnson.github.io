@@ -8,6 +8,7 @@
     ) {{  tab.name  }}
   .parent-container
     SoundCloud(ref="soundcloud")
+    .border
     LiveTheater(ref="theater")
 </template>
 
@@ -34,7 +35,8 @@ export default {
 
   methods: {
     scrollTo(ref) {
-      console.log(ref);
+      const el = this.$refs[ref].$el;
+      el.scrollIntoView();
     },
   },
 }
@@ -65,5 +67,23 @@ export default {
     height: 100%;
     max-height: 100%;
     overflow-y: scroll;
+  }
+
+  .border {
+    width: 80%;
+    height: 2px;
+    margin: 24px 0px;
+    margin-left: 10%;
+    
+    background-color: $cyan;
+    box-shadow:
+      0 0 7px $cyan,
+      0 0 10px $cyan,
+      0 0 21px $cyan,
+      0 0 42px $cyan,
+      0 0 82px $white,
+      0 0 92px $white,
+      0 0 102px $white,
+      0 0 151px $white;
   }
 </style>
