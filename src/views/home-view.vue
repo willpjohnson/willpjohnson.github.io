@@ -63,6 +63,11 @@ export default {
     max-height: calc(100% - 80px);
     max-width: 100px;
     background-color: $white;
+    box-shadow:
+      0 0 7px $white,
+      0 0 10px $white,
+      0 0 21px $white,
+      0 0 42px $white;
 
     margin-right: 12px;
   }
@@ -72,12 +77,13 @@ export default {
     height: 100%;
     max-height: 100%;
     overflow-y: scroll;
+    scroll-behavior: smooth;
   }
 
   .border {
     width: 80%;
     height: 2px;
-    margin: 24px 0px;
+    margin: 36px 0px;
     margin-left: 10%;
     
     background-color: $cyan;

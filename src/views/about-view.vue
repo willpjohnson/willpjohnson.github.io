@@ -46,6 +46,7 @@
     .bio {
       width: 40vw;
       font-size: 24px;
+      color: $white;
     }
 
   }
