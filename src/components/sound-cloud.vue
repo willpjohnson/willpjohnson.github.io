@@ -60,10 +60,7 @@
     height: $diameter;
     background-color: white;
     border-radius: $diameter;
-    box-shadow: 
-      -4px 4px 2px $white,
-      -4px 4px 4px $white,
-      -4px 4px 8px $black;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 
     img {
       width: $diameter * .75;
