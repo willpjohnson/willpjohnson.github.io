@@ -10,11 +10,14 @@
     SoundCloud(ref="soundcloud")
     .border
     LiveTheater(ref="theater")
+    .border
+    ScenesIWishIScored(ref="scenes")
 </template>
 
 <script>
 import SoundCloud from '../components/sound-cloud.vue';
 import LiveTheater from '../components/live-theater.vue';
+import ScenesIWishIScored from '../components/scenes-i-wish-i-scored.vue';
 
 export default {
   name: 'HomeView',
@@ -22,6 +25,7 @@ export default {
   components: {
     SoundCloud,
     LiveTheater,
+    ScenesIWishIScored,
   },
 
   computed: {
@@ -29,6 +33,7 @@ export default {
       return [
         { name: 'Soundcloud', ref: 'soundcloud' },
         { name: 'Theater', ref: 'theater' },
+        { name: 'Scenes I Wish I Scored', ref: 'scenes' },
       ];
     },
   },
@@ -47,7 +52,6 @@ export default {
 
   .home {
     display: flex;
-    // padding: 20px;
   }
   .sub-nav {
     margin: 20px;
@@ -57,6 +61,7 @@ export default {
     justify-content: space-between;
     height: calc(100% - 80px);
     max-height: calc(100% - 80px);
+    max-width: 100px;
     background-color: $white;
 
     margin-right: 12px;
