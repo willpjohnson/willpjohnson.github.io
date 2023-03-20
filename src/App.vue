@@ -17,13 +17,15 @@ router-view.router-view
 <style scoped lang="scss">
 @import '../public/colors.scss';
 
+$nav-height: 120px;
+$nav-padding: 20px;
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  height: 120px;
-  min-height: 120px;
+  padding: $nav-padding;
+  height: $nav-height;
+  min-height: $nav-height;
   background-color: $black;
 }
 
@@ -68,9 +70,10 @@ nav a.router-link-exact-active {
   .johnson { margin-left: 32px; }
 }
 
+$border-height: 4px;
 .border {
   width: 100%;
-  height: 2px;
+  height: $border-height;
   background-color: $cyan;
   box-shadow:
     0 0 7px $cyan,
@@ -81,5 +84,11 @@ nav a.router-link-exact-active {
     0 0 92px $white,
     0 0 102px $white,
     0 0 151px $white;
+}
+
+$neg-router-view-height: $nav-height + $nav-padding + $nav-padding + $border-height;
+.router-view {
+  height: calc(100% - #{$neg-router-view-height});
+  max-height: calc(100% - #{$neg-router-view-height});
 }
 </style>

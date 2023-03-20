@@ -38,7 +38,8 @@
     .images {
       display: flex;
       .photo {
-        width: 20vw;
+        object-fit: cover;
+        height: 50vh;
         margin-right: 2vw;
       }
     }
