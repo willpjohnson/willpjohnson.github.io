@@ -25,6 +25,15 @@ body {
   color: #F990E8;
   text-shadow: 1px 1px 1px #0BD2D3;
 }
+.link.selected {
+  color: #FFFFFF;
+  text-shadow:
+    0 0 4px #0BD2D3,
+    0 0 8px #0BD2D3,
+    0 0 9px #0BD2D3,
+    0 0 10px #0BD2D3,
+    0 0 15px #0BD2D3;
+}
 .link:hover {
   color: #FFFFFF;
   transform: translate(-1px, -1px);
