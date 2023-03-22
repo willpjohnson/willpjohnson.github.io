@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import ScrollDetector from '../scroll.js';
 import AdSpots from '../components/ad-spots.vue';
 import VideoGames from '../components/video-games.vue';
 import SoundCloud from '../components/sound-cloud.vue';
@@ -28,6 +29,8 @@ import ScenesIWishIScored from '../components/scenes-i-wish-i-scored.vue';
 
 export default {
   name: 'HomeView',
+
+  mixins: [ ScrollDetector ],
 
   components: {
     AdSpots,
@@ -39,7 +42,7 @@ export default {
 
   data() {
     return {
-      closestRef: null,
+      focusedRef: null,
       tabs: [
         { name: 'Advertising', ref: 'ads' },
         { name: 'Video Games', ref: 'games' },
@@ -47,47 +50,21 @@ export default {
         { name: 'Theater', ref: 'theater' },
         { name: 'Scenes I Wish I Scored', ref: 'scenes' },
       ],
+      containerHeight: null,
+      containerScrollHeight: null,
     };
   },
 
   mounted() {
-    const container = this.$refs.container;
-    container.onscroll = this.onScroll;
-    this.tabs.forEach((tab) => {
-      const top = this.$refs[tab.ref].$el.offsetTop;
-      const height = this.$refs[tab.ref].$el.offsetHeight;
-      const middle = top + (height / 2);
-      tab.position = middle;
-    });
-    this.closestRef = this.tabs[0].ref;
+    this.$refs.container.onscroll = this.onScroll;
+    this.getSizeOfContainerAndPositionsOfRefs();
+    window.onresize = this.getSizeOfContainerAndPositionsOfRefs;
+    this.focusedRef = this.tabs[0].ref;
   },
 
   methods: {
-    scrollTo(ref) {
-      const el = this.$refs[ref].$el;
-      el.scrollIntoView();
-    },
-
-    onScroll() {
-      const container = this.$refs.container;
-      const containerHeight = container.offsetHeight;
-      const scrollTop = container.scrollTop;
-      const middleOfScreen = scrollTop + (containerHeight / 2);
-
-      let closestTab = { ref: null, dist: -1 };
-      this.tabs.forEach((tab) => {
-        const dist = Math.abs(middleOfScreen - tab.position);
-        if (closestTab.dist < 0) {
-          closestTab = { ref: tab.ref, dist };
-        } else {
-          if (closestTab.dist > dist) closestTab = { ref: tab.ref, dist };
-        }
-      });
-      this.closestRef = closestTab.ref;
-    },
-
     linkClass(ref) {
-      if (this.closestRef === ref) {
+      if (this.focusedRef === ref) {
         return 'selected';
       }
     },
