@@ -8,6 +8,8 @@
       @click="scrollTo(tab.ref)"
     ) {{  tab.name  }}
   .parent-container(ref="container")
+    AdSpots(ref="ads")
+    .border
     SoundCloud(ref="soundcloud")
     .border
     LiveTheater(ref="theater")
@@ -16,6 +18,7 @@
 </template>
 
 <script>
+import AdSpots from '../components/ad-spots.vue';
 import SoundCloud from '../components/sound-cloud.vue';
 import LiveTheater from '../components/live-theater.vue';
 import ScenesIWishIScored from '../components/scenes-i-wish-i-scored.vue';
@@ -24,6 +27,7 @@ export default {
   name: 'HomeView',
 
   components: {
+    AdSpots,
     SoundCloud,
     LiveTheater,
     ScenesIWishIScored,
@@ -33,6 +37,7 @@ export default {
     return {
       closestRef: null,
       tabs: [
+        { name: 'Advertising', ref: 'ads' },
         { name: 'Soundcloud', ref: 'soundcloud' },
         { name: 'Theater', ref: 'theater' },
         { name: 'Scenes I Wish I Scored', ref: 'scenes' },
