@@ -9,6 +9,7 @@
       style="position:absolute;top:0;left:0;width:100%;height:100%;"
       title="Nacho Libre (Encarnacion)"
     )
+  slot
 </template>
 
 <script>
@@ -32,5 +33,6 @@
   .vimeo-embed {
     width: 40%;
     margin: 12px;
+    position: relative;
   }
 </style>
