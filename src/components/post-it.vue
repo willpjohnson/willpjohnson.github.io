@@ -1,7 +1,7 @@
 <template lang="pug">
 .post-it(
   @dblclick="close"
-  :style="{ top: top, right: right, display: display }"
+  :style="{ top: `${top}px`, right: `${right}px`, display: display }"
 )
   .close(@click="close") &#10007
   div {{ text }}
@@ -47,7 +47,7 @@
     width: 120px;
     height: 120px;
     padding: 20px;
-    transform: rotate(-15deg);
+    transform: rotate(-8deg);
     box-shadow: -4px 4px 4px $black;
 
     .close {
@@ -60,6 +60,6 @@
     }
   }
   .post-it:hover {
-    transform: rotate(-15deg) scale(1.01, 1.01);
+    transform: rotate(-8deg) scale(1.01, 1.01);
   }
 </style>
