@@ -7,9 +7,6 @@
     .vimeo-embed-row
       VimeoEmbed(:id="110213267")
       VimeoEmbed(:id="110212920")
-    .vimeo-embed-row
-      VimeoEmbed(:id="110212921")
-      VimeoEmbed(:id="110213268")
 </template>
 
 <script>

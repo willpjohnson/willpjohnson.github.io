@@ -15,20 +15,11 @@
     .highlight-row
       SoundCloudEmbed(
         type="playlists"
-        id="1235753893"
+        id="45387503"
       )
       SoundCloudEmbed(
         type="tracks"
         id="1356773245"
-      )
-    .highlight-row
-      SoundCloudEmbed(
-        type="tracks"
-        id="160420227"
-      )
-      SoundCloudEmbed(
-        type="playlists"
-        id="45387503"
       )
 </template>
 

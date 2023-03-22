@@ -10,6 +10,8 @@
   .parent-container(ref="container")
     AdSpots(ref="ads")
     .border
+    ShortFilms(ref="films")
+    .border
     VideoGames(ref="games")
     .border
     SoundCloud(ref="soundcloud")
@@ -22,6 +24,7 @@
 <script>
 import ScrollDetector from '../scroll.js';
 import AdSpots from '../components/ad-spots.vue';
+import ShortFilms from '../components/short-films.vue';
 import VideoGames from '../components/video-games.vue';
 import SoundCloud from '../components/sound-cloud.vue';
 import LiveTheater from '../components/live-theater.vue';
@@ -34,6 +37,7 @@ export default {
 
   components: {
     AdSpots,
+    ShortFilms,
     VideoGames,
     SoundCloud,
     LiveTheater,
@@ -45,6 +49,7 @@ export default {
       focusedRef: null,
       tabs: [
         { name: 'Advertising', ref: 'ads' },
+        { name: 'Short Films', ref: 'films' },
         { name: 'Video Games', ref: 'games' },
         { name: 'Soundcloud', ref: 'soundcloud' },
         { name: 'Theater', ref: 'theater' },
