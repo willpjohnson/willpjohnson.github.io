@@ -10,6 +10,8 @@
   .parent-container(ref="container")
     AdSpots(ref="ads")
     .border
+    VideoGames(ref="games")
+    .border
     SoundCloud(ref="soundcloud")
     .border
     LiveTheater(ref="theater")
@@ -19,6 +21,7 @@
 
 <script>
 import AdSpots from '../components/ad-spots.vue';
+import VideoGames from '../components/video-games.vue';
 import SoundCloud from '../components/sound-cloud.vue';
 import LiveTheater from '../components/live-theater.vue';
 import ScenesIWishIScored from '../components/scenes-i-wish-i-scored.vue';
@@ -28,6 +31,7 @@ export default {
 
   components: {
     AdSpots,
+    VideoGames,
     SoundCloud,
     LiveTheater,
     ScenesIWishIScored,
@@ -38,6 +42,7 @@ export default {
       closestRef: null,
       tabs: [
         { name: 'Advertising', ref: 'ads' },
+        { name: 'Video Games', ref: 'games' },
         { name: 'Soundcloud', ref: 'soundcloud' },
         { name: 'Theater', ref: 'theater' },
         { name: 'Scenes I Wish I Scored', ref: 'scenes' },
