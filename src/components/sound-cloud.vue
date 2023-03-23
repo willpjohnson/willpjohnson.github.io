@@ -1,9 +1,9 @@
 <template lang="pug">
-.sc-container
+.grid-container
   .sc-icon(@click="openSoundcloud")
     img(src="../../public/images/soundcloud.svg")
   .highlight-grid
-    .highlight-row
+    .grid-row
       SoundCloudEmbed(
         type="playlists"
         id="1515606427"
@@ -12,7 +12,7 @@
         type="playlists"
         id="607152600"
       )
-    .highlight-row
+    .grid-row
       SoundCloudEmbed(
         type="playlists"
         id="45387503"
@@ -39,9 +39,6 @@
 
 <style scoped lang="scss">
   @import '../../public/colors.scss';
-  .sc-container {
-    margin: 20px 0px;
-  }
 
   $diameter: 160px;
   .sc-icon {

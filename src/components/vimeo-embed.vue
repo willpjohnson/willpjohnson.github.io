@@ -30,9 +30,15 @@
 </script>
 
 <style scoped lang="scss">
+  @import '../../public/colors.scss';
+
   .vimeo-embed {
     width: 40%;
     margin: 12px;
     position: relative;
+    @media only screen and (max-width: $mobile-width) {
+      width: 80%;
+      margin: 0 0 12px 0;
+    }
   }
 </style>

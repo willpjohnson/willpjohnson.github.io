@@ -66,9 +66,26 @@ body {
   border-radius: 10px;
 }
 
+.grid-container {
+  margin: 20px 0px;
+  position: relative;
+}
+.grid-row {
+  display: flex;
+  justify-content: center;
+}
+
 /* Keep synced with the value in colors.scss */
 @media only screen and (max-width: 450px) {
   .hidden-on-mobile {
     display: none;
+  }
+
+  .grid-container {
+    margin: 0;
+  }
+  .grid-row {
+    flex-direction: column;
+    align-items: center;
   }
 }

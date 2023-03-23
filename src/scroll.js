@@ -9,6 +9,8 @@ export default {
       const container = this.$refs.container;
       this.containerHeight = container.offsetHeight;
       this.containerScrollHeight = container.scrollHeight;
+      // For mobile detection
+      this.$store.commit('updateOnMobile', window.innerWidth);
     },
 
     onScroll() {

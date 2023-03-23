@@ -1,5 +1,5 @@
 <template lang="pug">
-.post-it(
+.post-it.hidden-on-mobile(
   @dblclick="close"
   :style="{ top: `${top}px`, right: `${right}px`, display: display }"
 )

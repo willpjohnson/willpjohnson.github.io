@@ -100,6 +100,12 @@ export default {
       0 0 21px $white;
 
     margin-right: 12px;
+
+    @media only screen and (max-width: $mobile-width) {
+      margin: 4px;
+      font-size: 12px;
+      padding: 20px 4px;
+    }
   }
 
   .parent-container {
