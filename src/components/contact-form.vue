@@ -101,15 +101,12 @@ form.contact(
     color: $white;
     font-size: 24px;
 
-    border: 4px solid $cyan;
-    border-radius: 16px;
+    border: 1px solid $cyan;
+    border-radius: 8px;
     box-shadow:
-      0 0 3px $cyan,
-      0 0 5px $cyan,
+      0 0 7px $cyan,
       0 0 10px $cyan,
-      0 0 15px $cyan,
-      0 0 20px $white,
-      0 0 25px $white;
+      0 0 21px $white;
     .header {
       margin: 16px;
     }

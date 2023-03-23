@@ -1,14 +1,6 @@
 <template lang="pug">
 .about
-  .images
-    img.photo(
-      alt="Baby Will"
-      src="../assets/young-will.jpg"
-    )
-    img.photo(
-      alt="Adult Will"
-      src="../assets/will.jpg"
-    )
+  SelfPortrait
   .bio-and-contact
     .bio
       span My name is Will and I am a New York City based composer and producer. 
@@ -33,10 +25,11 @@
 </template>
 
 <script>
+  import SelfPortrait from '../components/self-portrait.vue';
   import ContactForm from '../components/contact-form.vue';
 
   export default {
-    components: { ContactForm },
+    components: { SelfPortrait, ContactForm },
   }
 </script>
 
@@ -45,14 +38,6 @@
   .about {
     padding: 20px;
     display: flex;
-    .images {
-      display: flex;
-      .photo {
-        object-fit: cover;
-        height: 50vh;
-        margin-right: 2vw;
-      }
-    }
     .bio-and-contact {
       .bio {
         width: 40vw;
