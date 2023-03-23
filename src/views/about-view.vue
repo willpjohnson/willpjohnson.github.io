@@ -42,6 +42,7 @@
     @media only screen and (max-width: $mobile-width) {
       flex-direction: column;
       align-items: center;
+      overflow-y: scroll;
     }
     .bio-and-contact {
       .bio {
