@@ -1,12 +1,10 @@
 export default {
   methods: {
     getSizeOfContainerAndPositionsOfRefs() {
-      let cumHeight = 0;
       this.tabs.forEach((tab) => {
-        const height = this.$refs[tab.ref].$el.offsetHeight;
-        tab.top = cumHeight;
-        cumHeight += height;
-        tab.bottom = cumHeight;
+        const el = this.$refs[tab.ref].$el;
+        tab.top = el.offsetTop;
+        tab.bottom = el.offsetTop + el.offsetHeight;
       });
       const container = this.$refs.container;
       this.containerHeight = container.offsetHeight;
@@ -33,7 +31,17 @@ export default {
 
     scrollTo(ref) {
       const el = this.$refs[ref].$el;
-      el.scrollIntoView();
+      const tab = this.tabs.find(t => t.ref === ref);
+      const height = tab.bottom - tab.top;
+      if (height > this.containerHeight) {
+        el.scrollIntoView();
+      } else {
+        el.scrollIntoView({
+          behavior: 'auto',
+          block: 'center',
+          inline: 'center'
+        });
+      }
     },
   }
 };
