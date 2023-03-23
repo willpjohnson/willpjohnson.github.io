@@ -1,6 +1,6 @@
 <template lang="pug">
 .images
-  img.photo(
+  img.photo.hidden-on-mobile(
     alt="Baby Will"
     src="../assets/young-will.jpg"
   )

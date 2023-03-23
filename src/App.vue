@@ -10,7 +10,7 @@ nav
     router-link.link(
       to="/about"
     ) About
-.border
+.border.hidden-on-mobile
 router-view.router-view
 </template>
 
@@ -24,6 +24,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: $nav-padding;
+  width: calc(100vw - #{$nav-padding * 2});
   height: $nav-height;
   min-height: $nav-height;
   background-color: $black;

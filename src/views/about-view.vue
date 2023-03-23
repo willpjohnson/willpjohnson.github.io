@@ -38,12 +38,22 @@
   .about {
     padding: 20px;
     display: flex;
+
+    @media only screen and (max-width: $mobile-width) {
+      flex-direction: column;
+      align-items: center;
+    }
     .bio-and-contact {
       .bio {
         width: 40vw;
         font-size: 24px;
         color: $white;
         margin-bottom: 24px;
+
+        @media only screen and (max-width: $mobile-width) {
+          width: 100%;
+          margin-top: 40px;
+        }
       }
     }
 
