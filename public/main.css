@@ -23,7 +23,7 @@ body {
   text-decoration: none;
   cursor: pointer;
   color: #F990E8;
-  text-shadow: 1px 1px 1px #0BD2D3;
+  text-shadow: 1px 1px 1px #FFFFFF;
 }
 .link.selected {
   color: #FFFFFF;

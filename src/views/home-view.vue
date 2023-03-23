@@ -85,6 +85,7 @@ export default {
   }
   .sub-nav {
     margin: 20px;
+    margin-left: 24px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -92,12 +93,11 @@ export default {
     height: calc(100% - 80px);
     max-height: calc(100% - 80px);
     max-width: 100px;
-    background-color: $white;
+    border-radius: 8px;
     box-shadow:
-      0 0 7px $white,
-      0 0 10px $white,
-      0 0 21px $white,
-      0 0 42px $white;
+      0 0 7px $cyan,
+      0 0 10px $cyan,
+      0 0 21px $white;
 
     margin-right: 12px;
   }
