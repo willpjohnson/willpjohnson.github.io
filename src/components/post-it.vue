@@ -3,7 +3,10 @@
   @dblclick="close"
   :style="{ top: `${top}px`, right: `${right}px`, display: display }"
 )
-  .close(@click="close") &#10007
+  .close(
+    v-if="destroyable"
+    @click="close"
+  ) &#10007
   div {{ text }}
 </template>
 
@@ -22,6 +25,10 @@
         type: String,
         default: null,
       },
+      destroyable: {
+        type: Boolean,
+        default: true,
+      },
     },
 
     data() {
@@ -32,7 +39,9 @@
 
     methods: {
       close() {
-        this.display = 'none';
+        if (this.destroyable) {
+          this.display = 'none';
+        }
       },
     },
   }
