@@ -66,15 +66,26 @@
 </script>
 
 <style scoped lang="scss">
+  @import '../../public/colors.scss';
+
   $button-size: 80px;
   .theater-container{
     display: flex;
     justify-content: space-around;
     margin: 20px 0px;
+    @media only screen and (max-width: $mobile-width) {
+      flex-direction: column;
+    }
     .theater-piece {
       position: relative;
       .image {
         height: 400px;
+        @media only screen and (max-width: $mobile-width) {
+          height: auto;
+          max-width: 60%;
+          width: 60%;
+          margin: 8px;
+        }
       }
     }
     .theater-piece:hover {
