@@ -105,6 +105,8 @@ export default {
       margin: 4px;
       font-size: 12px;
       padding: 20px 4px;
+      height: calc(100% - 120px);
+      max-height: calc(100% - 120px);
     }
   }
 
@@ -116,6 +118,11 @@ export default {
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-behavior: smooth;
+
+    @media only screen and (max-width: $mobile-width) {
+      height: 88%;
+      max-height: 88%;
+    }
   }
 
   .border {
