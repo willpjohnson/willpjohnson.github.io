@@ -18,10 +18,10 @@
 </template>
 
 <script>
-  import ocvAud from '../../public/audio/OCV.mp3';
-  import ttmnAud from '../../public/audio/TTMN.mp3';
-  import ocvImg from '../../public/images/ocv.jpeg';
+  import ttmnAud from '../../public/audio/ttmn.mp3';
+  import ocvAud from '../../public/audio/ocv.mp3';
   import ttmnImg from '../../public/images/ttmn.jpeg';
+  import ocvImg from '../../public/images/ocv.jpeg';
 
   export default {
     data() {
@@ -34,8 +34,8 @@
     computed: {
       assets() {
         return [
-          { key: 'ocv', aud: ocvAud, img: ocvImg },
           { key: 'ttmn', aud: ttmnAud, img: ttmnImg },
+          { key: 'ocv', aud: ocvAud, img: ocvImg },
         ];
       },
     },
