@@ -45,6 +45,10 @@
       overflow-y: scroll;
     }
     .bio-and-contact {
+      @media only screen and (max-width: $mobile-width) {
+        margin-top: 40px;
+        margin-bottom: 40px;
+      }
       .bio {
         width: 40vw;
         font-size: 24px;
@@ -53,7 +57,6 @@
 
         @media only screen and (max-width: $mobile-width) {
           width: 100%;
-          margin-top: 40px;
         }
       }
     }
