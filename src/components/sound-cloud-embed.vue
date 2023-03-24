@@ -51,14 +51,9 @@ iframe(
       },
     },
 
-    mounted() {
-      console.log(this.$store.state.onMobile)
-    },
-
     methods: {
       resize() {
         this.onMobile = window.innerWidth <= 450;
-        console.log(this.onMobile);
       },
     },
   }
