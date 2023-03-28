@@ -1,0 +1,91 @@
+#app {
+  font-family: 'Righteous', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+@font-face {
+  font-family: stillTime;
+  src: url(still_time.otf);
+  font-weight: bold;
+}
+
+body {
+  background-color: #000000;
+}
+
+.link {
+  text-decoration: none;
+  cursor: pointer;
+  color: #F990E8;
+  text-shadow: 1px 1px 1px #FFFFFF;
+}
+.link.selected {
+  color: #FFFFFF;
+  text-shadow:
+    0 0 4px #0BD2D3,
+    0 0 8px #0BD2D3,
+    0 0 9px #0BD2D3,
+    0 0 10px #0BD2D3,
+    0 0 15px #0BD2D3;
+}
+.link:hover {
+  color: #FFFFFF;
+  transform: translate(-1px, -1px);
+
+  text-shadow:
+    0 0 4px #F990E8,
+    0 0 8px #F990E8,
+    0 0 9px #F990E8,
+    0 0 10px #F990E8,
+    0 0 15px #F990E8;
+}
+
+.hover:hover {
+  cursor: pointer;
+  transform: translate(-2px, -2px);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #FFFFFF;
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #F990E8;
+  border-radius: 10px;
+}
+
+.grid-container {
+  margin: 20px 0px;
+  position: relative;
+}
+.grid-row {
+  display: flex;
+  justify-content: center;
+}
+
+/* Keep synced with the value in colors.scss */
+@media only screen and (max-width: 450px) {
+  .hidden-on-mobile {
+    display: none;
+  }
+
+  .grid-container {
+    margin: 0;
+  }
+  .grid-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
