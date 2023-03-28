@@ -3,7 +3,7 @@
   PostIt(
     :top="4"
     :right="80"
-    text="This is a collection of classic score-less moments that I thought could use some help"
+    text="A collection of a capella moments from film and TV that I thought could use some help"
   )
   .grid
     .grid-row
